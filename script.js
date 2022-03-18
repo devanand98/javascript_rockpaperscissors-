@@ -1,13 +1,13 @@
 let choices= ["rock","paper","scissors"];
 
-function computerSelection(){
+function computerPlay(){
     return choices[Math.floor(Math.random() * choices.length)]
 }
 
-function userSelection(){
-    let playerSelection =prompt("Enter your choice:","");
-    return playerSelection.toLowerCase;
-}
+/*function playerSelection(){
+    let userSelection =prompt("Enter your choice:","");
+    return userSelection.toLowerCase;
+} */
 
 function playRound(computerSelection,playerSelection){
 
@@ -47,31 +47,22 @@ function playRound(computerSelection,playerSelection){
     }
 }
 
+function game(){
+    for (let i=0;i<5;i++){
+        let playerChoice = prompt("Enter your choice:","");
+        let playerSelection = playerChoice.toLowerCase();
+        let computerSelection = computerPlay();
+        console.log(playRound(computerSelection,playerSelection));
+
+    }
+}
+
+console.log(game());
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log(userPlay())
 
 
